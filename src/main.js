@@ -51,10 +51,24 @@ function handleData(event) {
   event.preventDefault();
   const data = JSON.parse(event.target.responseText);
 
-  for (const i = 0; i < handleData; i++);
-  const list = document.querySelector("#list");
-  const newLi = document.createElement("li");
-  newLi.innerText = data[0].text;
-  list.appendChild(newLi);
-  console.log(data);
+  for (i = 0; i < data.length; i++) {
+    const list = document.querySelector("#list");
+    const newLi = document.createElement("li");
+    newLi.innerText = data[i].text;
+    list.appendChild(newLi);
+  }
+}
+
+function handleData(event) {
+    event.preventDefault();
+    const data = JSON.parse(event.target.responseText);
+
+    for (i = 0; i < data.length; i++) {
+        const list = document.querySelector("#list");
+        const secNewList = document.createElement("#li");
+        secNewList.innerText = data[i].text;
+        list.appendChild(secNewList);
+    }
+
+
 }
